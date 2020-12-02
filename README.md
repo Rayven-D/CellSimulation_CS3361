@@ -16,27 +16,27 @@ python RayvenJan_Deray_R11558709_final_project.py -i <input_file_name> -o <outpu
 ### Current Times <sub><sup>`in seconds`:
 ```
     100x100 array
-	1   thread:		3.772849668
-	2   threads:		1.299805564 
-	4   threads:		.925376691 
-	8   threads:		.615411383 
-	16  threads:		.650742211 
-	32  threads:		.797888589 
+	1   thread:		2.870863284
+	2   threads:		.880522093 
+	4   threads:		.666691255 
+	8   threads:		.492846057  
+	16  threads:		.681837124 
+	32  threads:		.976690614 
 
     1000x1000 array
-	1   thread:		194.638022486 
-	2   threads:		108.095379187 
-	4   threads:		61.740447382 
-	8   threads:		37.819331245 
-	16  threads:		21.854849613 
-	32  threads:		18.995629146 
+	1   thread:		117.039384358  
+	2   threads:		66.319961146 
+	4   threads:		38.543000157 
+	8   threads:		24.232261485 
+	16  threads:		14.619499583 
+	32  threads:		11.542806292 
 
     10000x10000 array
-	9   threads:	    	2780.860638662 
-	18  threads:	    	1658.370904022 
-	36  threads:	    	1086.316807469 
+	9   threads:	    	1749.598217939 
+	18  threads:	    	1089.754576722  
+	36  threads:	    	835.519872763 
 
-    Wall-Clock Time: ~ 1h 40m
+    Wall-Clock Time: ~ 1h 7m
 ```
 
 
