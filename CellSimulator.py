@@ -1,5 +1,5 @@
 import multiprocessing as mp
-
+import CreateTestFile
 import time
 
 array = []
@@ -81,6 +81,7 @@ def check_neighbors(cur_cell, y_pos):
 
 
 def main():
+    CreateTestFile.main()
     global array
     global rows
     start = time.time()
@@ -137,4 +138,5 @@ def main():
     exit(0)
 
 if __name__ == "__main__":
+   
     main()
