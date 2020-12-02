@@ -1,5 +1,5 @@
 import multiprocessing as mp
-import sys
+
 import time
 
 array = []
@@ -84,35 +84,34 @@ def main():
     global array
     global rows
     start = time.time()
-    if(len(sys.argv) < 5):
-        print("INVALID INPUT. SPECIFY I/O FILES")
-        exit(6)
-
+    
     num_threads = 1
-
-    if(sys.argv[1] != '-i'): 
-        print("NO INPUT FILE SPECIFIED.")
-        exit(1)
-    if(sys.argv[3] != '-o'):
-        print("NO OUTPUT FILE SPECIFIED.")
-        exit(2)
-    if(len(sys.argv) == 7 and sys.argv[5] == '-t'):
-        num_threads = int(sys.argv[6])
-    elif(len(sys.argv) < 5):
-        print("INVALID INPUT")
-        exit(3)
+    correct_input = False
+    while not correct_input:
+        try:
+            num_threads = int(input("Enter number of processes to spawn: "))
+            correct_input = True
+        except Exception:
+            print("Incorrect Input")
 
     pool = mp.Pool(processes=num_threads)
 
     try:
-        with open(sys.argv[2]) as f:
+        with open("test_file.dat") as f:
+            print("Original: ")
+            for line in f:
+                print(line, end="")
+            f.seek(0)
             array = pool.map(readLines, f)
+
+
     except IOError:
         print("COULD NOT READ FILE")
         exit(4)
 
 
     rows = len(array)
+
     tempArray = processMatrix(array) 
     for _ in range(99):
         tempArray = pool.map(time_step, tempArray)
@@ -121,18 +120,19 @@ def main():
     tempArray = pool.map(final_step, tempArray) #the 100th step
     fullString = ''.join(tempArray)#joins the whole array into a string
 
-    #print R# after completing the 100 steps
-    print("Project :: R11558709")
+
 
     try:
-        with open(sys.argv[4], 'w') as f:
+        with open("output.out", 'w') as f:
+            print("\n\n100 steps:")
+            print(fullString)
             f.write(fullString)
             
     except IOError:
         print("COULD NOT CREATE FILE")
         exit(5)
     end = time.time()
-    print("Total execution time:: ")
+    print("\nTotal execution time:: ")
     print(end-start)
     exit(0)
 
