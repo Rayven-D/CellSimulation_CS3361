@@ -12,7 +12,7 @@ Throughout this project, apart from the main goal of the project, I have learned
 python CreateTestFile.py  <---- RUN FIRST
 python CellSimulator.py
 ```
-<sub>Input `-i` and ouput `-o` are required. Default thread count is `1`
+
 
 ### Current Times <sub><sup>`in seconds`:
 ```
