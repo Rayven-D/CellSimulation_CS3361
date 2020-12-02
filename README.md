@@ -9,7 +9,6 @@ Throughout this project, apart from the main goal of the project, I have learned
 ### How to run:
     
 ```
-python CreateTestFile.py  <---- RUN FIRST
 python CellSimulator.py
 ```
 
