@@ -9,7 +9,8 @@ Throughout this project, apart from the main goal of the project, I have learned
 ### How to run:
     
 ```
-python CellSimulator.py -i <input_file_name> -o <output_file_name> [ -t <number_of_threads/processes>]
+python CreateTestFile.py  <---- RUN FIRST
+python CellSimulator.py
 ```
 <sub>Input `-i` and ouput `-o` are required. Default thread count is `1`
 
