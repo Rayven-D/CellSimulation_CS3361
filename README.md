@@ -126,15 +126,9 @@ After 100 Steps:
     OO.OOO.O..O.OOOOO..O..OOOOOO.....O.O.O..
 ```
 
-### Compare .py
->   Compares two input files to check if the files are *exactly* the same
-```
-python compare.py <file1> <file2>
-```
-
+### PrintResult .py
+>   Print the resulting file output
 ### CreateTestFile .py
 >   Creates a test file from specified inputs. Supports multithreading
-```
-python CreateTestFile.py <number_rows> <number_columns> <number_threads>
-```
-<sub><sup>All 3 inputs are required
+
+

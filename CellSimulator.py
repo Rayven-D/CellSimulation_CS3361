@@ -1,5 +1,6 @@
 import multiprocessing as mp
 import CreateTestFile
+import PrintResult
 import time
 
 array = []
@@ -99,10 +100,6 @@ def main():
 
     try:
         with open("test_file.dat") as f:
-            print("Original: ")
-            for line in f:
-                print(line, end="")
-            f.seek(0)
             array = pool.map(readLines, f)
 
 
@@ -125,9 +122,8 @@ def main():
 
     try:
         with open("output.out", 'w') as f:
-            print("\n\n100 steps:")
-            print(fullString)
             f.write(fullString)
+            
             
     except IOError:
         print("COULD NOT CREATE FILE")
@@ -135,6 +131,7 @@ def main():
     end = time.time()
     print("\nTotal execution time:: ")
     print(end-start)
+    PrintResult.main(end-start)
     exit(0)
 
 if __name__ == "__main__":

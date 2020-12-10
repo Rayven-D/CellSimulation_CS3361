@@ -8,10 +8,10 @@ def main():
         try: 
             rows = int(input("Enter number of rows: "))
             cols = int(input("Enter number of columns: "))
-            if( 10 <= rows <= 100 and 10 <= cols <= 100):
+            if( 3 <= rows  and 3 <= cols ):
                 correct_input = True
             else:
-                print("Please enter numbers between 10 and 100")
+                print("Please enter a number greater than 3")
         except Exception:
             print("Please enter a integer number.")
     temp_str = ""
